@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Simulador de Turno SerZen</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+  <h1>Simulador de Turno Inteligente - SerZen</h1>
+  <p>
+    Este simulador permite a los usuarios reservar un turno de masaje
+    personalizado, eligiendo tipo, duración y modalidad del servicio.
+  </p>
+  
+  <button onclick="simularTurno()">Reservar un turno</button>
+
+  <h2>Consultá tu reserva</h2>
+  <input
+    type="text"
+    id="codigoReserva"
+    placeholder="Ingresá tu código de reserva"
+  />
+  <button onclick="consultarReserva()">Buscar</button>
+  <div id="resultadoReserva"></div>
+</main>
+    </main>
+    <footer></footer>
+  </body>
+  <script src="./main.js"></script>
+</html>
