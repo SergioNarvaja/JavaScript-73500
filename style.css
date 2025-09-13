@@ -1,105 +1,74 @@
-:root {
-  --verde: #004221;
-  --marron: #422100;
-  --beige: #f5f0e6;
-  --blanco: #ffffff;
-}
-
-* {
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f1ed;
+  color: #333;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-  background: var(--beige);
-  color: var(--marron);
-  line-height: 1.6;
-  padding: 20px;
+header {
+  background-color: #004221;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 h1,
-h2,
-h3 {
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-h1 {
-  color: var(--verde);
-  font-size: 2.2rem;
-}
-
 h2 {
-  color: var(--marron);
-  margin-top: 30px;
+  color: #004221;
 }
 
-button {
-  background: var(--verde);
-  color: var(--blanco);
-  border: none;
-  padding: 10px 20px;
-  margin-top: 10px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-button:hover {
-  background: var(--marron);
-  transform: scale(1.05);
+label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
 }
 
 input,
-select {
+select,
+button {
   width: 100%;
-  padding: 10px;
-  margin: 8px 0;
-  border: 2px solid var(--verde);
-  border-radius: 6px;
-  outline: none;
-  transition: border 0.3s;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
-input:focus,
-select:focus {
-  border: 2px solid var(--marron);
+button {
+  background-color: #422100;
+  color: #fff;
+  border: none;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
-form {
-  background: var(--blanco);
-  border: 2px solid var(--verde);
-  padding: 20px;
-  border-radius: 12px;
-  max-width: 500px;
-  margin: 20px auto;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+button:hover {
+  background-color: #6a3a00;
 }
 
 #resumenReserva,
 #resultadoReserva {
-  background: var(--blanco);
-  border-left: 5px solid var(--verde);
-  padding: 15px;
-  margin-top: 20px;
+  margin-top: 1.5rem;
+  padding: 1rem;
   border-radius: 8px;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#resumenReserva h3,
-#resultadoReserva h3 {
-  color: var(--verde);
+  background: #eaf6ed;
+  border: 1px solid #004221;
 }
 
 footer {
+  background: #004221;
+  color: #fff;
   text-align: center;
-  margin-top: 40px;
-  padding: 15px;
-  color: var(--blanco);
-  background: var(--verde);
-  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 2rem;
 }

@@ -1,0 +1,5 @@
+[
+{ "tipo": "relajante", "precioPorMinuto": 500 },
+{ "tipo": "descontracturante", "precioPorMinuto": 600 },
+{ "tipo": "personalizado", "precioPorMinuto": 700 }
+]

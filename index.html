@@ -1,51 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Simulador SerZen</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <main>
-    <h1>Simulador de Turno SerZen</h1>
-    <form id="formReserva">
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" required>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulador de Turno SerZen</title>
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Axios CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Simulador de Turno Inteligente - SerZen</h1>
+    </header>
 
-      <label for="tipo">Tipo de masaje:</label>
-      <select id="tipo" required>
-        <option value="relajante">Relajante</option>
-        <option value="descontracturante">Descontracturante</option>
-        <option value="personalizado">Personalizado</option>
-      </select>
+    <main>
+      <p>
+        Este simulador permite reservar un turno de masaje personalizado,
+        eligiendo tipo, duración, modalidad y fecha.
+      </p>
 
-      <label for="duracion">Duración (minutos):</label>
-      <select id="duracion" required>
-        <option value="30">30</option>
-        <option value="60">60</option>
-        <option value="90">90</option>
-      </select>
+      <section class="form-section">
+        <h2>Reservar un turno</h2>
+        <form id="formReserva">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" required />
 
-      <label for="modalidad">Modalidad:</label>
-      <select id="modalidad" required>
-        <option value="gabinete">Gabinete</option>
-        <option value="domicilio">Domicilio</option>
-      </select>
+          <label for="tipo">Tipo de masaje</label>
+          <select id="tipo" required>
+            <option value="relajante">relajante</option>
+            <option value="descontracturante">descontracturante</option>
+            <option value="personalizado">personalizado</option>
+          </select>
 
-      <label for="fecha">Fecha del turno:</label>
-      <input type="date" id="fecha" required>
+          <label for="duracion">Duración (minutos)</label>
+          <select id="duracion" required>
+            <option value="30">30</option>
+            <option value="60">60</option>
+            <option value="90">90</option>
+          </select>
 
-      <button type="submit">Reservar</button>
-    </form>
+          <label for="modalidad">Modalidad</label>
+          <select id="modalidad" required>
+            <option value="Gabinete">Gabinete</option>
+            <option value="Domicilio">Domicilio</option>
+          </select>
 
-    <div id="resumenReserva"></div>
+          <label for="fecha">Fecha del turno</label>
+          <input type="date" id="fecha" required />
 
-    <h2>Consultar reserva</h2>
-    <input type="text" id="codigoReserva" placeholder="Ingresá tu código de reserva">
-    <button onclick="consultarReserva()">Buscar</button>
-    <div id="resultadoReserva"></div>
-  </main>
-  <script src="main.js"></script>
-</body>
+          <button type="submit">Confirmar Reserva</button>
+        </form>
+
+        <div id="resumenReserva"></div>
+      </section>
+
+      <section class="consulta-section">
+        <h2>Consultar reserva</h2>
+        <input
+          type="text"
+          id="codigoReserva"
+          placeholder="Ingresá tu código de reserva"
+        />
+        <button id="btnConsultar">Buscar</button>
+        <div id="resultadoReserva"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 SerZen - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="./main.js"></script>
+  </body>
 </html>
