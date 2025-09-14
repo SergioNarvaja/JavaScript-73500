@@ -1,75 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simulador de Turno SerZen</title>
-    <link rel="stylesheet" href="./style.css" />
-    <!-- Axios CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  </head>
-  <body>
-    <header>
-      <h1>Simulador de Turno Inteligente - SerZen</h1>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <title>Reserva de Masajes</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <h1>Reserva tu masaje</h1>
 
-    <main>
-      <p>
-        Este simulador permite reservar un turno de masaje personalizado,
-        eligiendo tipo, duración, modalidad y fecha.
-      </p>
+  <form id="formReserva">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" required>
 
-      <section class="form-section">
-        <h2>Reservar un turno</h2>
-        <form id="formReserva">
-          <label for="nombre">Nombre</label>
-          <input type="text" id="nombre" required />
+    <label for="tipo">Tipo de masaje:</label>
+    <select id="tipo" required></select>
 
-          <label for="tipo">Tipo de masaje</label>
-          <select id="tipo" required>
-            <option value="relajante">relajante</option>
-            <option value="descontracturante">descontracturante</option>
-            <option value="personalizado">personalizado</option>
-          </select>
+    <label for="duracion">Duración:</label>
+    <select id="duracion" required>
+      <option value="30">30 minutos</option>
+      <option value="60">60 minutos</option>
+      <option value="90">90 minutos</option>
+    </select>
 
-          <label for="duracion">Duración (minutos)</label>
-          <select id="duracion" required>
-            <option value="30">30</option>
-            <option value="60">60</option>
-            <option value="90">90</option>
-          </select>
+    <label for="modalidad">Modalidad:</label>
+    <select id="modalidad" required>
+      <option value="Consultorio">Consultorio</option>
+      <option value="Domicilio">Domicilio</option>
+    </select>
 
-          <label for="modalidad">Modalidad</label>
-          <select id="modalidad" required>
-            <option value="Gabinete">Gabinete</option>
-            <option value="Domicilio">Domicilio</option>
-          </select>
+    <label for="fecha">Fecha:</label>
+    <input type="date" id="fecha" required>
 
-          <label for="fecha">Fecha del turno</label>
-          <input type="date" id="fecha" required />
+    <label for="hora">Hora:</label>
+    <input type="time" id="hora" min="09:00" max="20:00" required>
 
-          <button type="submit">Confirmar Reserva</button>
-        </form>
+    <button type="submit">Reservar</button>
+  </form>
 
-        <div id="resumenReserva"></div>
-      </section>
+  <div id="resumenReserva"></div>
 
-      <section class="consulta-section">
-        <h2>Consultar reserva</h2>
-        <input
-          type="text"
-          id="codigoReserva"
-          placeholder="Ingresá tu código de reserva"
-        />
-        <button id="btnConsultar">Buscar</button>
-        <div id="resultadoReserva"></div>
-      </section>
-    </main>
+  <h3>Consultar/Modificar/Cancelar reserva</h3>
+  <input type="number" id="codigoReserva" placeholder="Código de reserva">
+  <button id="btnConsultar">Consultar</button>
 
-    <footer>
-      <p>© 2025 SerZen - Todos los derechos reservados</p>
-    </footer>
-
-    <script src="./main.js"></script>
-  </body>
+  <div id="resultadoReserva"></div>
+  <div id="editarReserva"></div>
+</body>
 </html>

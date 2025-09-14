@@ -1,74 +1,46 @@
 body {
   font-family: Arial, sans-serif;
-  background: #f4f1ed;
+  margin: 20px;
+  background: #f5f5f5;
   color: #333;
-  margin: 0;
-  padding: 0;
 }
 
-header {
-  background-color: #004221;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-}
-
-main {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 1.5rem;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-h1,
-h2 {
+h1, h3 {
   color: #004221;
 }
 
-label {
-  display: block;
-  margin-top: 1rem;
-  font-weight: bold;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 400px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
-input,
-select,
-button {
-  width: 100%;
-  padding: 0.5rem;
-  margin-top: 0.3rem;
-  border-radius: 5px;
+input, select, button {
+  padding: 8px;
+  border-radius: 6px;
   border: 1px solid #ccc;
 }
 
 button {
-  background-color: #422100;
-  color: #fff;
-  border: none;
-  margin-top: 1rem;
+  background: #004221;
+  color: white;
+  font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s;
 }
 
 button:hover {
-  background-color: #6a3a00;
+  background: #006633;
 }
 
-#resumenReserva,
-#resultadoReserva {
-  margin-top: 1.5rem;
-  padding: 1rem;
-  border-radius: 8px;
-  background: #eaf6ed;
-  border: 1px solid #004221;
-}
-
-footer {
-  background: #004221;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
+#resumenReserva, #resultadoReserva, #editarReserva {
+  margin-top: 20px;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
